@@ -1,17 +1,18 @@
 <div class="panel-group" id="accordion">
   <div class="panel panel-default" ng-repeat="module in library">
       <div class="panel-heading">
-          <h4 class="panel-title">
+          <h4 class="panel-t  itle">
               <a data-toggle="collapse" data-target="#collapse{{module.id}}" data-parent="#accordion" href="">{{module.name}}</a>
           </h4>
       </div>
-      <div id="collapse{{module.id}}" class="panel-collapse collapse in">
+      <div id="collapse{{module.id}}" class="panel-collapse collapse">
           <div class="panel-body">
               <ul>
                 <li ng-repeat="lesson in module.lessons">
-                  <a href="/#/team/{{params.teamId}}/library/{{params.libraryId}}/module/{{module.id}}/lesson/{{lesson.id}}">{{lesson.title}}</a>
+                  <a href="/#/library/{{module.library.id}}/module/{{module.id}}/lesson/{{lesson.id}}">{{lesson.title}}</a>
                 </li>
               </ul>
           </div>
       </div>
   </div>
+</div>
